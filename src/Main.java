@@ -64,18 +64,19 @@ public class Main {
     private static int stringPredDost() {
         System.out.println("Сколько до вас КМ");
         Scanner in = new Scanner(System.in);
-        int  deliveryDistance = in.nextInt();
+        int deliveryDistance = in.nextInt();
         return deliveryDistance;
     }
 
     private static void predDost(int deliveryDistance) {
-        if (deliveryDistance >= 0 && deliveryDistance <= 19){
-            System.out.println("Доставка в пределах " +deliveryDistance+ " км занимает сутки");
-        } if (deliveryDistance >= 20 && deliveryDistance <= 59) {
-            System.out.println("Доставка в пределах "+deliveryDistance+" км занимает 2 дня");
+        if (deliveryDistance >= 0 && deliveryDistance <= 19) {
+            System.out.println("Доставка в пределах " + deliveryDistance + " км занимает сутки");
+        }
+        if (deliveryDistance >= 20 && deliveryDistance <= 59) {
+            System.out.println("Доставка в пределах " + deliveryDistance + " км занимает 2 дня");
         }
         if (deliveryDistance >= 60 && deliveryDistance <= 99) {
-            System.out.println("Доставка в пределах "+deliveryDistance+" км занимает 3 дня");
+            System.out.println("Доставка в пределах " + deliveryDistance + " км занимает 3 дня");
         }
         if (deliveryDistance >= 100) {
             System.out.println("Доставки нет");

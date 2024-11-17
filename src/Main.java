@@ -1,21 +1,17 @@
-import org.w3c.dom.ls.LSOutput;
-
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        yearsVisokos(inString());
+        yearsVisokos(stringYearsVisokos());
         getClientOS(stringClientOS());
         predDost(stringPredDost());
     }
-
-    private static int inString() {
+    private static int stringYearsVisokos() {
         System.out.println("Введите год:");
         Scanner in = new Scanner(System.in);
         int years = in.nextInt();
         return years;
     }
-
     private static void yearsVisokos(int years) {
         if (years >= 1584) {
             if ((years % 4 == 0) && (years % 100 != 0) || (years % 400 == 0)) {
@@ -34,7 +30,6 @@ public class Main {
         int clientOS = in.nextInt();
         return clientOS;
     }
-
     private static void getClientOS(int clientOS) {
         Scanner in = new Scanner(System.in);
         switch (clientOS) {
@@ -57,8 +52,6 @@ public class Main {
                 }
                 break;
         }
-
-
     }
 
     private static int stringPredDost() {
